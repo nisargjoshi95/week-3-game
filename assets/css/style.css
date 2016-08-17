@@ -1,0 +1,158 @@
+@font-face {
+    font-family: wildThings;
+    src: url(../fonts/SUPERTIK.ttf);
+    font-weight: bold;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  background-color: rgba(141, 206, 214, 1.00);
+  color: rgba(210, 173, 128, 1.00);
+  position: relative;
+  text-shadow: 7px 7px 7px rgba(0,0,0,0.1), 14px 14px 7px rgba(0,0,0,0.05), -7px -7px 7px rgba(0,0,0,0.1), -14px -14px 7px rgba(0,0,0,0.1);
+}
+
+@keyframes sun_glow {
+    0% {box-shadow:
+        0 0 60px 30px rgba(255, 255, 255, 0.25), /* inner white */
+        0 0 100px 60px rgba(255, 150, 105, 0.8), /* middle orange */
+        0 0 280px 90px rgba(255, 111, 105, 0.5); /* outer red */}
+    50% {box-shadow:
+        0 0 60px 30px rgba(255, 255, 255, 0), /* inner white */
+        0 0 100px 60px rgba(255, 150, 105, 0), /* middle orange */
+        0 0 280px 90px rgba(255, 111, 105, 0); /* outer red */}
+    100% {box-shadow:
+        0 0 60px 30px rgba(255, 255, 255, 0.25), /* inner white */
+        0 0 100px 60px rgba(255, 150, 105, 0.8), /* middle orange */
+        0 0 280px 90px rgba(255, 111, 105, 0.5); /* outer red */}
+}
+
+@keyframes h1_float {
+    0% {margin-top: -10%;}
+    50% {margin-top: -8%;}
+    100% {margin-top: -10%}
+}
+
+@keyframes h3_float {
+    0% {margin-top: -7%;}
+    50% {margin-top: -5%;}
+    100% {margin-top: -7%}
+}
+
+@keyframes ocean_float {
+  0% {margin-top: -5%;}
+  50% {margin-top: -3%;}
+  100% {margin-top: -5%;}
+}
+
+@keyframes wave_left {
+  0% {left: -300px;}
+  50% {left: 150px;}
+  100% {left: -300px;}
+}
+
+@keyframes wave_right {
+  0% {right: -150px;}
+  50% {right: -600px;}
+  100% {right: -150px;}
+}
+
+div.sun {
+  margin-left: 5%;
+  margin-top: 3%;
+  width: 200px;
+  height: 200px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9669+0,ffba69+47,ffcc5c+100 */
+  background: #ff9669; /* Old browsers */
+  background: -moz-radial-gradient(center, circle cover, #ffcc5c 0%, #ffba69 47%, #ff9669 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, circle cover, #ffcc5c 0%,#ffba69 47%,#ff9669 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(circle at center, #ffcc5c 0%,#ffba69 47%,#ff9669 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9669', endColorstr='#ffcc5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+/*  box-shadow:
+        0 0 60px 30px rgba(255, 255, 255, 0.25), /* inner white */
+        0 0 100px 60px rgba(255, 150, 105, 0.8), /* middle orange */
+        0 0 140px 90px rgba(255, 111, 105, 0.5); /* outer red */*/
+  -webkit-animation: sun_glow 2s ease-in-out infinite;
+  -o-animation: sun_glow 2s ease-in-out infinite;
+  animation: sun_glow 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10%;
+  left: 0;
+  right: 0;
+  font-family: wildThings;
+  font-size: 100px;
+  position: absolute;
+  z-index: 2;
+  /*animation: h1_float 2s ease-in-out infinite;*/
+}
+
+h3 {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: -6%;
+  font-family: 'Pacifico', sans-serif;
+  font-size: 32px;
+  color: rgba(255, 111, 105, 1.00);
+  text-shadow: none;
+  position: absolute;
+  z-index: 3;
+  transform: translate(15%, 0) rotate(-20deg);
+  /*animation: h3_float 2s ease-in-out infinite;*/
+}
+
+div.ocean:before{
+  content:'';
+  position:absolute;
+  top:-20px;
+  width:50%;
+  height:150px;
+  background-color: rgba(106, 210, 158, 1.00);
+  display:block;
+  border-radius: 45%;
+  -webkit-animation: wave_left 10s ease-in-out infinite;
+  -o-animation: wave_left 10s ease-in-out infinite;
+  animation: wave_left 10s ease-in-out infinite;
+}
+
+div.ocean:after {
+  content:'';
+  position:absolute;
+  top:-20px;
+  right: 0px;
+  width:50%;
+  height:150px;
+  background-color: rgba(106, 210, 158, 1.00);
+  display:block;
+  border-radius: 45%;
+  -webkit-animation: wave_right 8s ease-in-out infinite;
+  -o-animation: wave_right 8s ease-in-out infinite;
+  animation: wave_right 8s ease-in-out infinite;
+}
+
+div.ocean {
+  margin-top: 8%;
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(106, 210, 158, 1.00);
+  z-index: 1;
+  animation: ocean_float 2s ease-in-out infinite;
+}
