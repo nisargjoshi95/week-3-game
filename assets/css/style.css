@@ -54,15 +54,15 @@ body {
 }
 
 @keyframes wave_left {
-  0% {left: -300px;}
-  50% {left: 150px;}
-  100% {left: -300px;}
+  0% {left: -500px;}
+  50% {left: -50px;}
+  100% {left: -500px;}
 }
 
 @keyframes wave_right {
-  0% {right: -150px;}
-  50% {right: -600px;}
-  100% {right: -150px;}
+  0% {right: -100px;}
+  50% {right: -550px;}
+  100% {right: -100px;}
 }
 
 div.sun {
@@ -83,9 +83,9 @@ div.sun {
         0 0 60px 30px rgba(255, 255, 255, 0.25), /* inner white */
         0 0 100px 60px rgba(255, 150, 105, 0.8), /* middle orange */
         0 0 140px 90px rgba(255, 111, 105, 0.5); /* outer red */*/
-  -webkit-animation: sun_glow 2s ease-in-out infinite;
-  -o-animation: sun_glow 2s ease-in-out infinite;
-  animation: sun_glow 4s ease-in-out infinite;
+  -webkit-animation: sun_glow 6s ease-in-out infinite;
+  -o-animation: sun_glow 6s ease-in-out infinite;
+  animation: sun_glow 6s ease-in-out infinite;
   z-index: 0;
 }
 
@@ -118,6 +118,12 @@ h3 {
   /*animation: h3_float 2s ease-in-out infinite;*/
 }
 
+p {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 28px;
+  color: black;
+}
+
 div.ocean:before{
   content:'';
   position:absolute;
@@ -142,9 +148,9 @@ div.ocean:after {
   background-color: rgba(106, 210, 158, 1.00);
   display:block;
   border-radius: 45%;
-  -webkit-animation: wave_right 8s ease-in-out infinite;
-  -o-animation: wave_right 8s ease-in-out infinite;
-  animation: wave_right 8s ease-in-out infinite;
+  -webkit-animation: wave_right 9s ease-in-out infinite;
+  -o-animation: wave_right 9s ease-in-out infinite;
+  animation: wave_right 9s ease-in-out infinite;
 }
 
 div.ocean {
@@ -155,4 +161,33 @@ div.ocean {
   background-color: rgba(106, 210, 158, 1.00);
   z-index: 1;
   animation: ocean_float 2s ease-in-out infinite;
+}
+
+div.main_container {
+  position: absolute;
+  width: 50%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  /*border: thick dashed black;*/
+  z-index: 4
+}
+
+span.status_container {
+  position: absolute;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  border: thick dashed black;
+}
+
+span.game_container {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  border: thick black;
+  border-style: dashed dashed dashed none;
 }
